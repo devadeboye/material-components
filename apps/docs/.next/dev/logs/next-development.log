@@ -1,2 +1,696 @@
-[00:00:01.865] Server  LOG     ✓ Ready in 1275ms
-[00:00:58.231] Server  LOG     ○ Compiling / ...
+[00:00:01.795] Server  LOG     ✓ Ready in 1453ms
+[00:00:02.295] Server  ERROR   ⨯ ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+
+./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+[00:00:03.214] Browser ERROR   uncaughtError: Error: ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+[00:00:03.434] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:03.434] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:03.491] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:03.491] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:04.651] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:04.651] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:18.789] Server  ERROR   ⨯ ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+
+./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+[00:00:19.013] Browser ERROR   uncaughtError: Error: ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+[00:00:19.207] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:19.207] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:19.207] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:19.207] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:24.019] Server  ERROR   ⨯ ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+
+./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+[00:00:24.167] Browser ERROR   uncaughtError: Error: ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+[00:00:24.317] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:24.317] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:24.317] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:24.317] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:25.584] Server  ERROR   ⨯ ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+
+./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+[00:00:25.717] Browser ERROR   uncaughtError: Error: ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+[00:00:25.864] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:25.864] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:25.864] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:00:25.864] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:26:15.895] Server  ERROR   ⨯ ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+
+./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+[00:26:16.232] Browser ERROR   uncaughtError: Error: ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+
+
+[00:26:16.458] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:26:16.458] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:26:16.458] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:27
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                           ^^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:26:16.458] Browser ERROR   ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { useState, useEffect } from "react";
+    |                 ^^^^^^^^
+  2 |
+  3 | // Types
+  4 | interface RippleType {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx
+    ./myWork/organisations/devadeboye/frontend/material-components/apps/docs/app/page.tsx
+[00:26:46.983] Server  LOG     ✓ Compiled in 1118ms

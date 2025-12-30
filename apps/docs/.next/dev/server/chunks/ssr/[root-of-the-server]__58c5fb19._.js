@@ -63,13 +63,13 @@ const Ripple = ()=>{
             }, index, false, {
                 fileName: "[project]/myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx",
                 lineNumber: 49,
-                columnNumber: 11
+                columnNumber: 6
             }, ("TURBOPACK compile-time value", void 0));
         })
     }, void 0, false, {
         fileName: "[project]/myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/ripple.tsx",
         lineNumber: 43,
-        columnNumber: 5
+        columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 };
 }),
