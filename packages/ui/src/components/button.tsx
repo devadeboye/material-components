@@ -1,3 +1,8 @@
+/**
+ * Buttons prompt most actions in a UI
+ * https://m3.material.io/components/buttons/specs
+ */
+
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { clsx, type ClassValue } from "clsx";
@@ -6,11 +11,11 @@ import { Ripple } from "./ripple";
 
 // Utils
 function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+	return twMerge(clsx(inputs));
 }
 
 const buttonVariants = cva(
-	"relative inline-flex items-center justify-center gap-2 rounded-full font-medium transition-colors hover:cursor-pointer disabled:pointer-events-none disabled:opacity-50 overflow-hidden",
+	"relative inline-flex items-center justify-center gap-2 font-medium transition-all hover:cursor-pointer disabled:pointer-events-none disabled:opacity-50 overflow-hidden",
 	{
 		variants: {
 			variant: {
@@ -24,19 +29,61 @@ const buttonVariants = cva(
 				elevated:
 					"bg-white text-gray-900 shadow-md hover:shadow-lg dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800",
 			},
+
 			size: {
-				sm: "h-8 px-4 text-xs",
-				md: "h-10 px-6 text-sm",
-				lg: "h-12 px-8 text-base",
-				icon: "h-10 w-10 p-0",
+				/** extra small */
+				xs: "h-8 px-3 text-xs",
+				/** small */
+				s: "h-10 px-4 text-sm",
+				/** medium */
+				m: "h-14 px-6 text-base",
+				/** large */
+				l: "h-24 px-12 text-lg",
+				/** extra large */
+				xl: "h-34 px-16 text-xl",
+			},
+
+			shape: {
+				round: "rounded-full",
+				square: "",
 			},
 			fullWidth: {
 				true: "w-full",
 			},
 		},
+
+		compoundVariants: [
+			{
+				shape: "square",
+				size: "xs",
+				className: "rounded-xl active:rounded-lg",
+			},
+			{
+				shape: "square",
+				size: "s",
+				className: "rounded-lg active:rounded-lg",
+			},
+			{
+				shape: "square",
+				size: "m",
+				className: "rounded-2xl active:rounded-xl",
+			},
+			{
+				shape: "square",
+				size: "l",
+				className: "rounded-[28px] active:rounded-2xl",
+			},
+			{
+				shape: "square",
+				size: "xl",
+				className: "rounded-[28px] active:rounded-2xl",
+			},
+		],
+
 		defaultVariants: {
 			variant: "filled",
-			size: "md",
+			size: "m",
+			shape: "round",
 		},
 	}
 );
@@ -49,19 +96,53 @@ export interface ButtonProps
 	leadingIcon?: React.ReactNode;
 }
 
+/** determines the gap between leading icon and button text */
+const determineGap = (
+	size: "xs" | "s" | "m" | "l" | "xl" | null | undefined
+) => {
+	switch (size) {
+		case "xs":
+			return "gap-1";
+		case "s":
+			return "gap-2";
+		case "m":
+			return "gap-2";
+		case "l":
+			return "gap-3";
+		case "xl":
+			return "gap-4";
+		default:
+			return "gap-2";
+	}
+};
+
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 	(
-		{ className, variant, size, fullWidth, children, leadingIcon, ...props },
+		{
+			className,
+			variant,
+			size,
+			shape,
+			fullWidth,
+			children,
+			leadingIcon,
+			...props
+		},
 		ref
 	) => {
+		let gap = determineGap(size);
 		return (
 			<button
-				className={cn(buttonVariants({ variant, size, fullWidth, className }))}
+				className={cn(
+					buttonVariants({ variant, size, shape, fullWidth, className })
+				)}
 				ref={ref}
 				{...props}
 			>
 				{/* State Layer (Hover/Reset) handled via hover:bg utilities */}
-				<span className="relative z-10 flex items-center justify-center gap-2">
+				<span
+					className={`relative z-10 flex items-center justify-center ${gap}`}
+				>
 					{leadingIcon}
 					{children}
 				</span>
