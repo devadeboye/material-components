@@ -143,9 +143,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				<span
 					className={`relative z-10 flex items-center justify-center ${gap}`}
 				>
-					<div className={`flex items-center justify-center ${iconSize}`}>
-						{leadingIcon}
-					</div>
+					{leadingIcon && (
+						<div className={`flex items-center justify-center ${iconSize}`}>
+							{leadingIcon}
+						</div>
+					)}
+
 					{children}
 				</span>
 				<Ripple />
