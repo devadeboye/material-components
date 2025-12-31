@@ -78,7 +78,8 @@ const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$myWor
             filled: "bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 shadow-sm hover:shadow-md",
             tonal: "bg-gray-200 text-gray-900 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700",
             outlined: "border border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100 dark:border-gray-700 dark:text-gray-100 dark:hover:bg-gray-800",
-            text: "bg-transparent text-gray-900 hover:bg-gray-100 dark:text-gray-100 dark:hover:bg-gray-800"
+            text: "bg-transparent text-gray-900 hover:bg-gray-100 dark:text-gray-100 dark:hover:bg-gray-800",
+            elevated: "bg-white text-gray-900 shadow-md hover:shadow-lg dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800"
         },
         size: {
             sm: "h-8 px-4 text-xs",
@@ -95,7 +96,7 @@ const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$myWor
         size: "md"
     }
 });
-const Button = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$myWork$2f$organisations$2f$devadeboye$2f$frontend$2f$material$2d$components$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$3_react$40$19$2e$2$2e$3_$5f$react$40$19$2e$2$2e$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].forwardRef(({ className, variant, size, fullWidth, children, ...props }, ref)=>{
+const Button = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$myWork$2f$organisations$2f$devadeboye$2f$frontend$2f$material$2d$components$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$3_react$40$19$2e$2$2e$3_$5f$react$40$19$2e$2$2e$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].forwardRef(({ className, variant, size, fullWidth, children, leadingIcon, ...props }, ref)=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$myWork$2f$organisations$2f$devadeboye$2f$frontend$2f$material$2d$components$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$3_react$40$19$2e$2$2e$3_$5f$react$40$19$2e$2$2e$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
         className: cn(buttonVariants({
             variant,
@@ -108,22 +109,25 @@ const Button = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$myW
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$myWork$2f$organisations$2f$devadeboye$2f$frontend$2f$material$2d$components$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$3_react$40$19$2e$2$2e$3_$5f$react$40$19$2e$2$2e$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 className: "relative z-10 flex items-center justify-center gap-2",
-                children: children
-            }, void 0, false, {
+                children: [
+                    leadingIcon,
+                    children
+                ]
+            }, void 0, true, {
                 fileName: "[project]/myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx",
-                lineNumber: 54,
-                columnNumber: 9
+                lineNumber: 64,
+                columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$myWork$2f$organisations$2f$devadeboye$2f$frontend$2f$material$2d$components$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$3_react$40$19$2e$2$2e$3_$5f$react$40$19$2e$2$2e$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$myWork$2f$organisations$2f$devadeboye$2f$frontend$2f$material$2d$components$2f$packages$2f$ui$2f$src$2f$components$2f$ripple$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Ripple"], {}, void 0, false, {
                 fileName: "[project]/myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx",
-                lineNumber: 57,
-                columnNumber: 9
+                lineNumber: 68,
+                columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/myWork/organisations/devadeboye/frontend/material-components/packages/ui/src/components/button.tsx",
-        lineNumber: 48,
-        columnNumber: 7
+        lineNumber: 58,
+        columnNumber: 4
     }, ("TURBOPACK compile-time value", void 0));
 });
 Button.displayName = "Button";

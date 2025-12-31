@@ -32,6 +32,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var index_exports = {};
 __export(index_exports, {
   Button: () => Button,
+  Card: () => Card,
   Ripple: () => Ripple
 });
 module.exports = __toCommonJS(index_exports);
@@ -2618,7 +2619,8 @@ var buttonVariants = cva(
         filled: "bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 shadow-sm hover:shadow-md",
         tonal: "bg-gray-200 text-gray-900 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700",
         outlined: "border border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100 dark:border-gray-700 dark:text-gray-100 dark:hover:bg-gray-800",
-        text: "bg-transparent text-gray-900 hover:bg-gray-100 dark:text-gray-100 dark:hover:bg-gray-800"
+        text: "bg-transparent text-gray-900 hover:bg-gray-100 dark:text-gray-100 dark:hover:bg-gray-800",
+        elevated: "bg-white text-gray-900 shadow-md hover:shadow-lg dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800"
       },
       size: {
         sm: "h-8 px-4 text-xs",
@@ -2637,7 +2639,7 @@ var buttonVariants = cva(
   }
 );
 var Button = import_react2.default.forwardRef(
-  ({ className, variant, size, fullWidth, children, ...props }, ref) => {
+  ({ className, variant, size, fullWidth, children, leadingIcon, ...props }, ref) => {
     return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(
       "button",
       {
@@ -2645,7 +2647,10 @@ var Button = import_react2.default.forwardRef(
         ref,
         ...props,
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "relative z-10 flex items-center justify-center gap-2", children }),
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { className: "relative z-10 flex items-center justify-center gap-2", children: [
+            leadingIcon,
+            children
+          ] }),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Ripple, {})
         ]
       }
@@ -2653,9 +2658,53 @@ var Button = import_react2.default.forwardRef(
   }
 );
 Button.displayName = "Button";
+
+// src/components/card.tsx
+var import_react3 = __toESM(require("react"));
+var import_jsx_runtime3 = require("react/jsx-runtime");
+function cn2(...inputs) {
+  return twMerge(clsx(inputs));
+}
+var cardVariants = cva(
+  "relative overflow-hidden rounded-2xl transition-shadow",
+  {
+    variants: {
+      variant: {
+        elevated: "bg-white text-gray-900 shadow-md hover:shadow-lg dark:bg-gray-900 dark:text-gray-100",
+        filled: "bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100",
+        outlined: "border border-gray-300 bg-transparent text-gray-900 dark:border-gray-700 dark:text-gray-100"
+      },
+      padding: {
+        none: "p-0",
+        sm: "p-4",
+        md: "p-6",
+        lg: "p-8"
+      }
+    },
+    defaultVariants: {
+      variant: "elevated",
+      padding: "md"
+    }
+  }
+);
+var Card = import_react3.default.forwardRef(
+  ({ className, variant, padding, children, ...props }, ref) => {
+    return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+      "div",
+      {
+        ref,
+        className: cn2(cardVariants({ variant, padding, className })),
+        ...props,
+        children
+      }
+    );
+  }
+);
+Card.displayName = "Card";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Button,
+  Card,
   Ripple
 });
 //# sourceMappingURL=index.js.map
