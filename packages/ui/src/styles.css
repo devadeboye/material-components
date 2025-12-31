@@ -1,16 +1,2 @@
 @import "tailwindcss";
-
-@theme inline {
-  --animate-ripple: ripple 600ms linear;
-
-  @keyframes ripple {
-    0% {
-      transform: scale(0);
-      opacity: 0.35;
-    }
-    100% {
-      transform: scale(4);
-      opacity: 0;
-    }
-  }
-}
+@import "./base.css";
