@@ -32,15 +32,15 @@ const buttonVariants = cva(
 
 			size: {
 				/** extra small */
-				xs: "h-8 px-3 text-xs",
+				xs: "h-8 px-3 font-medium text-sm",
 				/** small */
-				s: "h-10 px-4 text-sm",
+				s: "h-10 px-4 font-medium text-sm",
 				/** medium */
-				m: "h-14 px-6 text-base",
+				m: "h-14 px-6 font-medium text-base",
 				/** large */
-				l: "h-24 px-12 text-lg",
+				l: "h-24 px-12 font-normal text-2xl",
 				/** extra large */
-				xl: "h-34 px-16 text-xl",
+				xl: "h-34 px-16 font-normal text-[32px]/10",
 			},
 
 			shape: {
@@ -97,22 +97,22 @@ export interface ButtonProps
 }
 
 /** determines the gap between leading icon and button text */
-const determineGap = (
+const determineGapAndIconSize = (
 	size: "xs" | "s" | "m" | "l" | "xl" | null | undefined
 ) => {
 	switch (size) {
 		case "xs":
-			return "gap-1";
+			return ["gap-1", "w-5 h-5"];
 		case "s":
-			return "gap-2";
+			return ["gap-2", "w-5 h-5"];
 		case "m":
-			return "gap-2";
+			return ["gap-2", "w-6 h-6"];
 		case "l":
-			return "gap-3";
+			return ["gap-3", "w-8 h-8"];
 		case "xl":
-			return "gap-4";
+			return ["gap-4", "w-10 h-10"];
 		default:
-			return "gap-2";
+			return ["gap-2", "w-6 h-6"];
 	}
 };
 
@@ -130,7 +130,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 		},
 		ref
 	) => {
-		let gap = determineGap(size);
+		let [gap, iconSize] = determineGapAndIconSize(size);
 		return (
 			<button
 				className={cn(
@@ -143,7 +143,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				<span
 					className={`relative z-10 flex items-center justify-center ${gap}`}
 				>
-					{leadingIcon}
+					<div className={`flex items-center justify-center ${iconSize}`}>
+						{leadingIcon}
+					</div>
 					{children}
 				</span>
 				<Ripple />
