@@ -7,7 +7,7 @@ import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { Ripple } from "./ripple";
+import { Ripple } from "../ripple";
 
 // Utils
 function cn(...inputs: ClassValue[]) {
