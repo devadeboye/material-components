@@ -1,4 +1,5 @@
-export * from "./components/button/button";
+export * from "./components/button/Button";
 export * from "./components/card";
+export * from "./components/fab/FAB";
 // Ripple is internal-ish but we can export it if users want raw ripples
 export { Ripple } from "./components/ripple";
