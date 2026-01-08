@@ -7,7 +7,7 @@ const withMDX = createMDX({
 
 const nextConfig: NextConfig = {
 	pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-	transpilePackages: ["@material/ui"],
+	transpilePackages: ["@devadeboye/react-material-components"],
 };
 
 export default withMDX(nextConfig);

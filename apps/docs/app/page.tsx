@@ -6,7 +6,7 @@ export default function Home() {
 					Getting Started
 				</h1>
 				<p className="text-lg text-zinc-600 dark:text-zinc-400">
-					Welcome to the Material Components documentation. This library
+					Welcome to the React Material Components documentation. This library
 					provides a set of modern, accessible, and customizable UI components
 					built with Tailwind CSS v4.
 				</p>
@@ -18,7 +18,9 @@ export default function Home() {
 				</h2>
 
 				<div className="bg-zinc-100 dark:bg-zinc-900 p-4 rounded-lg overflow-x-auto">
-					<code className="text-sm">npm install @material/ui</code>
+					<code className="text-sm">
+						npm install @devadeboye/react-material-components
+					</code>
 				</div>
 
 				<h2 className="text-2xl font-semibold mt-8 mb-4 text-zinc-800 dark:text-zinc-200">

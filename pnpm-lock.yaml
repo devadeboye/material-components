@@ -17,9 +17,9 @@ importers:
 
   apps/docs:
     dependencies:
-      '@material/ui':
+      '@devadeboye/react-material-components':
         specifier: workspace:*
-        version: link:../../packages/ui
+        version: link:../../packages/react-material-components
       '@mdx-js/loader':
         specifier: ^3.1.1
         version: 3.1.1
@@ -70,7 +70,7 @@ importers:
         specifier: ^5
         version: 5.9.3
 
-  packages/ui:
+  packages/react-material-components:
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^4.1.3

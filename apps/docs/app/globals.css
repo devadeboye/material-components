@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@source "../../../packages/ui/src/**/*.{ts,tsx}";
-@import "../../../packages/ui/src/base.css";
+@source "../../../packages/react-material-components/src/**/*.{ts,tsx}";
+@import "../../../packages/react-material-components/src/base.css";
 @plugin "@tailwindcss/typography";
 
 :root {

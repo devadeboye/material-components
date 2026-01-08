@@ -24,7 +24,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
@@ -32,7 +32,7 @@ export default function RootLayout({
 					<aside className="w-64 border-r border-zinc-200 dark:border-zinc-800 p-6 hidden md:block fixed h-full overflow-y-auto">
 						<nav className="flex flex-col gap-4">
 							<Link href="/" className="font-bold text-xl mb-4 block">
-								Material UI
+								Material Components
 							</Link>
 							<div className="flex flex-col gap-2">
 								<span className="text-sm font-semibold text-zinc-500 uppercase tracking-wider">

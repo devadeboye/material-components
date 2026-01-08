@@ -19,10 +19,12 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"],
-      "@material/ui": ["../../packages/ui/src/index.ts"],
-      "@material/ui/*": ["../../packages/ui/src/*"]
-    }
+			"@/*": ["./*"],
+			"@devadeboye/react-material-components": [
+				"../../packages/ui/src/index.ts"
+			],
+			"@devadeboye/react-material-components/*": ["../../packages/ui/src/*"]
+		}
   },
   "include": [
     "next-env.d.ts",
