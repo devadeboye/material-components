@@ -1,0 +1,58 @@
+import { NavigationRail } from "@material/ui";
+import { NavigationRailDemo } from "./demo";
+
+# Navigation Rail
+
+Navigation rails provide access to primary destinations in apps when using tablet and desktop screens.
+
+## Overview
+
+The Navigation Rail is a side navigation component that can be collapsed or expanded. It typically contains 3-7 destinations and can optionally include a header (like a FAB) or footer action.
+
+## Interactive Demo
+
+<div className="my-8">
+  <NavigationRailDemo />
+</div>
+
+## Usage
+
+```tsx
+import { NavigationRail, type NavRailDestinationConfig } from "@material/ui";
+
+const destinations: NavRailDestinationConfig[] = [
+  {
+    id: "home",
+    icon: <HomeIcon />,
+    label: "Home",
+    onClick: () => console.log("Home clicked"),
+  },
+  // ... more destinations
+];
+
+export default function MyPage() {
+  return (
+    <div className="flex h-screen">
+      <NavigationRail 
+        destinations={destinations} 
+        activeId="home"
+      />
+      <main className="flex-1">
+        {/* Page content */}
+      </main>
+    </div>
+  );
+}
+```
+
+## Props
+
+The `NavigationRail` component accepts the following props:
+
+- `destinations`: Array of destination configuration objects.
+- `activeId`: The ID of the currently active destination.
+- `header`: Optional content to render at the top of the rail (e.g., a FAB).
+- `action`: Optional content to render at the bottom of the rail.
+- `showMenuButton`: Whether to show the hamburger menu button (default: `true`).
+- `onExpandedChange`: Callback fired when the expanded state changes.
+- `expanded`: Control the expanded state externally (optional).
