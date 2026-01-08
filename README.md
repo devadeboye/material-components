@@ -1,6 +1,6 @@
-# Material Components Monorepo 👋
+# Material Components Monorepo
 
-Welcome to the **Material Components** project! This is a monorepo containing our shared UI library and the documentation site. We use [TurboRepo](https://turbo.build/) to make our build system blazing fast and [pnpm](https://pnpm.io/) for efficient package management.
+Welcome to the **React Material Components** project! This is a monorepo containing our shared UI library and the documentation site. We use [TurboRepo](https://turbo.build/) to make our build system blazing fast and [pnpm](https://pnpm.io/) for efficient package management.
 
 ## Getting Started
 
@@ -36,7 +36,7 @@ This command will spin up:
 - The **UI Package** in watch mode
 - **Storybook** (typically at `http://localhost:6006`)
 
-## 📂 Project Structure
+## Project Structure
 
 Here's a quick map of the territory:
 
@@ -56,10 +56,10 @@ We love contributions! Whether you're fixing a bug, adding a new component, or i
 4.  **Commit & Push**: We use conventional commits, so keep your messages clear (e.g., `feat: add sparkle effect to button`).
 5.  **Open a PR**: Submit your pull request, and we'll review it together!
 
-## 🛠️ Useful Commands
+## Useful Commands
 
 - `pnpm build`: Build all packages and apps.
 - `pnpm lint`: Run the linter to keep code style consistent.
 - `pnpm clean`: Clean up `node_modules` and compiled assets if things get weird.
 
-Happy coding! 🎉
+Happy coding!
