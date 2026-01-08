@@ -1,7 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { NavigationRail, type NavRailDestinationConfig } from "@material/ui";
+import {
+	NavigationRail,
+	type NavRailDestinationConfig,
+} from "@devadeboye/react-material-components";
 
 const HomeIcon = () => (
 	<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -47,22 +50,23 @@ export function NavigationRailDemo() {
 	];
 
 	return (
-		<div className="h-[400px] border border-outline-variant rounded-xl overflow-hidden bg-surface-container flex relative">
-            {/* The NavigationRail handles its own width transition */}
-			<NavigationRail 
-                destinations={destinations} 
-                activeId={activeId} 
-				onExpandedChange={(expanded) => console.log('Expanded:', expanded)}
-            />
+		<div className="h-100 border border-outline-variant rounded-xl overflow-hidden bg-surface-container flex relative">
+			{/* The NavigationRail handles its own width transition */}
+			<NavigationRail
+				destinations={destinations}
+				activeId={activeId}
+				onExpandedChange={(expanded) => console.log("Expanded:", expanded)}
+			/>
 			<div className="flex-1 p-8">
 				<h3 className="text-2xl font-medium mb-4">Content Area</h3>
 				<p className="text-on-surface-variant">
 					Select a destination from the rail to see the active state change.
-                    Toggle the menu button to expand/collapse the rail.
+					Toggle the menu button to expand/collapse the rail.
 				</p>
-                <p className="mt-4 text-sm text-outline">
-                    Current Active ID: <span className="font-mono text-primary">{activeId}</span>
-                </p>
+				<p className="mt-4 text-sm text-outline">
+					Current Active ID:{" "}
+					<span className="font-mono text-primary">{activeId}</span>
+				</p>
 			</div>
 		</div>
 	);
