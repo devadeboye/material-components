@@ -17,7 +17,7 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const navRailVariants = cva(
-	"flex flex-col bg-surface text-on-surface h-full transition-[width] duration-300 ease-[cubic-bezier(0.2,0,0,1)] overflow-hidden",
+	"flex flex-col bg-surface text-on-surface min-h-dvh transition-[width] duration-300 ease-[cubic-bezier(0.2,0,0,1)] overflow-scroll",
 	{
 		variants: {
 			expanded: {
@@ -52,27 +52,41 @@ const MenuOpenIcon = () => (
 	</svg>
 );
 
+import { FAB, type FABProps } from "../fabs/Fab";
+import { ExtendedFAB, type ExtendedFABProps } from "../fabs/extended-fab";
+
 interface NavRailProps
 	extends
 		React.HTMLAttributes<HTMLDivElement>,
 		VariantProps<typeof navRailVariants> {
 	destinations: NavRailDestinationConfig[];
 	activeId?: string;
-	header?: React.ReactNode;
-	action?: React.ReactNode;
 	showMenuButton?: boolean;
 	onExpandedChange?: (expanded: boolean) => void;
+	/** Whether to show a FAB at the top of the rail */
+	showFab?: boolean;
+	/** Configuration for the FAB/ExtendedFAB */
+	fabConfig?: {
+		icon: React.ReactNode;
+		label: string;
+		onClick?: () => void;
+		color?: FABProps["color"];
+		variant?: FABProps["variant"];
+		className?: string;
+	};
+	alignment?: "center" | "top";
 }
 
 export const NavigationRail = ({
 	expanded: expandedProp,
 	destinations,
 	activeId,
-	header,
-	action,
+	showFab = false,
+	fabConfig,
 	showMenuButton = true,
 	onExpandedChange,
 	className,
+	alignment = "center",
 	...props
 }: NavRailProps) => {
 	const [internalExpanded, setInternalExpanded] = React.useState(false);
@@ -93,47 +107,82 @@ export const NavigationRail = ({
 			className={cn(navRailVariants({ expanded: isExpanded, className }))}
 			{...props}
 		>
-			{showMenuButton && (
-				<div className="p-4 flex flex-col items-center">
-					<button
-						onClick={handleToggle}
-						className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-on-surface/10 transition-colors cursor-pointer relative overflow-hidden"
-						aria-label={
-							isExpanded ? "Collapse navigation" : "Expand navigation"
-						}
+			<div className="flex flex-col gap-2">
+				{/* menu button */}
+				{showMenuButton && (
+					<div
+						className={`p-4 flex flex-col ${clsx({ "items-center": !isExpanded })}`}
 					>
-						<div className="relative z-10">
-							{isExpanded ? <MenuOpenIcon /> : <MenuIcon />}
-						</div>
-						<Ripple />
-					</button>
+						<button
+							onClick={handleToggle}
+							className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-on-surface/10 transition-colors cursor-pointer relative overflow-hidden"
+							aria-label={
+								isExpanded ? "Collapse navigation" : "Expand navigation"
+							}
+						>
+							<div className="relative z-10">
+								{isExpanded ? <MenuOpenIcon /> : <MenuIcon />}
+							</div>
+							<Ripple />
+						</button>
+					</div>
+				)}
+
+				{/* FAB */}
+				{showFab && fabConfig && (
+					<div
+						className={`px-4 py-2 flex flex-col ${clsx({ "items-center": !isExpanded })} min-h-14 transition-all duration-300`}
+					>
+						{isExpanded ? (
+							<ExtendedFAB
+								icon={fabConfig.icon}
+								label={fabConfig.label}
+								onClick={fabConfig.onClick}
+								color={fabConfig.color as ExtendedFABProps["color"]}
+								variant={fabConfig.variant}
+								size={"small"}
+								className={fabConfig.className}
+							/>
+						) : (
+							<FAB
+								size="regular" // Standard 56dp container
+								color={fabConfig.color}
+								variant={fabConfig.variant}
+								onClick={fabConfig.onClick}
+								aria-label={fabConfig.label}
+								className={fabConfig.className}
+							>
+								{fabConfig.icon}
+							</FAB>
+						)}
+					</div>
+				)}
+			</div>
+
+			{/* destinations */}
+			<div
+				className={`flex-1 flex flex-col gap-1 py-4 ${clsx({ "justify-center": alignment === "center" })}`}
+			>
+				<div>
+					{visibleDestinations.map((dest) => (
+						<NavigationRailDestination
+							key={dest.id}
+							icon={dest.icon}
+							label={dest.label}
+							badge={dest.badge}
+							active={dest.id === activeId}
+							expanded={isExpanded}
+							onClick={dest.onClick}
+						/>
+					))}
 				</div>
-			)}
-			{header && (
-				<div className="px-4 py-2 flex flex-col items-center">{header}</div>
-			)}
-			{action && (
-				<div className="px-4 py-2 flex flex-col items-center">{action}</div>
-			)}
-			<div className="flex-1 flex flex-col gap-1 py-4">
-				{visibleDestinations.map((dest) => (
-					<NavigationRailDestination
-						key={dest.id}
-						icon={dest.icon}
-						label={dest.label}
-						badge={dest.badge}
-						active={dest.id === activeId}
-						expanded={isExpanded}
-						onClick={dest.onClick}
-					/>
-				))}
 			</div>
 		</nav>
 	);
 };
 
 const navItemVariants = cva(
-	"relative flex items-center group cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.2,0,1)] px-4 py-3 outline-none focus-visible:outline-2 focus-visible:outline-primary",
+	"relative flex items-center group cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.2,0,1)] px-4 py-3 outline-none focus-visible:outline-2 focus-visible:outline-primary w-fit",
 	{
 		variants: {
 			active: {
@@ -161,8 +210,8 @@ const activeIndicatorVariants = cva(
 				false: "opacity-0 scale-x-50",
 			},
 			expanded: {
-				true: "inset-0 h-full w-full",
-				false: "inset-x-0 mx-auto top-0 h-8 w-14", // 56dp indicator in collapsed
+				true: "inset-0 h-14 px-4 w-full",
+				false: "inset-x-0 mx-auto top-3 h-8 w-14", // 56dp indicator in collapsed
 			},
 		},
 	}

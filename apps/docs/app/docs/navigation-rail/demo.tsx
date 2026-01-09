@@ -26,6 +26,7 @@ const SettingsIcon = () => (
 
 export function NavigationRailDemo() {
 	const [activeId, setActiveId] = useState("home");
+	const [showFab, setShowFab] = useState(true);
 
 	const destinations: NavRailDestinationConfig[] = [
 		{
@@ -49,6 +50,13 @@ export function NavigationRailDemo() {
 		},
 	];
 
+	// Simple pencil icon for FAB
+	const PencilIcon = (
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+			<path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+		</svg>
+	);
+
 	return (
 		<div className="h-100 border border-outline-variant rounded-xl overflow-hidden bg-surface-container flex relative">
 			{/* The NavigationRail handles its own width transition */}
@@ -56,13 +64,38 @@ export function NavigationRailDemo() {
 				destinations={destinations}
 				activeId={activeId}
 				onExpandedChange={(expanded) => console.log("Expanded:", expanded)}
+				showFab={showFab}
+				fabConfig={{
+					icon: PencilIcon,
+					label: "Compose",
+					color: "primary",
+					variant: "standard",
+					onClick: () => console.log("FAB Clicked"),
+				}}
 			/>
 			<div className="flex-1 p-8">
 				<h3 className="text-2xl font-medium mb-4">Content Area</h3>
-				<p className="text-on-surface-variant">
-					Select a destination from the rail to see the active state change.
-					Toggle the menu button to expand/collapse the rail.
-				</p>
+				<div className="mb-4">
+					<p className="text-on-surface-variant mb-2">
+						Select a destination from the rail to see the active state change.
+						Toggle the menu button to expand/collapse the rail.
+					</p>
+					<div className="flex items-center gap-2">
+						<input
+							type="checkbox"
+							id="showFab"
+							checked={showFab}
+							onChange={(e) => setShowFab(e.target.checked)}
+							className="w-4 h-4 cursor-pointer"
+						/>
+						<label
+							htmlFor="showFab"
+							className="text-sm font-medium cursor-pointer"
+						>
+							Show FAB
+						</label>
+					</div>
+				</div>
 				<p className="mt-4 text-sm text-outline">
 					Current Active ID:{" "}
 					<span className="font-mono text-primary">{activeId}</span>

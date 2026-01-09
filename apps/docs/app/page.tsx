@@ -1,4 +1,4 @@
-import { COMPONENTS } from "./utils/component-list";
+import { COMPONENTS } from "../lib/component-list";
 
 export default function Home() {
 	return (
