@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { NavigationRail, type NavRailDestinationConfig } from "./navigation-rail";
+import { NavigationRail, type NavRailDestinationConfig } from ".";
 import { useState } from "react";
 
 const meta: Meta<typeof NavigationRail> = {

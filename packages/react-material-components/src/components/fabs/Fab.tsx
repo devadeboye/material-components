@@ -5,14 +5,9 @@
 
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
 import { Ripple } from "../ripple";
+import { cn } from "../../../lib/utils/helpers";
 
-// Utils
-function cn(...inputs: ClassValue[]) {
-	return twMerge(clsx(inputs));
-}
 
 const fabVariants = cva(
 	"relative inline-flex items-center justify-center transition-all hover:cursor-pointer disabled:pointer-events-none disabled:opacity-50 overflow-hidden",
