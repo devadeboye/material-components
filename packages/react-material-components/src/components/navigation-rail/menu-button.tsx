@@ -5,13 +5,18 @@ import { clsx } from "clsx";
 
 interface MenuButtonProps {
 	isExpanded: boolean;
+	showMenuButton?: boolean;
 	handleToggle: () => void;
 }
 
-export const MenuButton = ({ isExpanded, handleToggle }: MenuButtonProps) => {
+export const MenuButton = ({
+	isExpanded,
+	showMenuButton = true,
+	handleToggle,
+}: MenuButtonProps) => {
 	return (
 		<div
-			className={`p-4 flex flex-col ${clsx({ "items-center": !isExpanded })}`}
+			className={`p-4 flex flex-col ${clsx({ "items-center": !isExpanded, "block md:hidden": !showMenuButton })}`}
 		>
 			<button
 				onClick={handleToggle}

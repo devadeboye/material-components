@@ -52,7 +52,7 @@ export const NavigationRail = ({
 	};
 
 	const navRailVariants = cva(
-		"flex flex-col transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)] z-50 scrollbar-none",
+		"flex flex-col transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)] z-50 scrollbar-none py-4",
 		{
 			variants: {
 				expanded: {
@@ -82,9 +82,11 @@ export const NavigationRail = ({
 				{...props}
 			>
 				<div className="flex flex-col gap-2">
-					{showMenuButton && (
-						<MenuButton isExpanded={isExpanded} handleToggle={handleToggle} />
-					)}
+					<MenuButton
+						isExpanded={isExpanded}
+						showMenuButton={showMenuButton}
+						handleToggle={handleToggle}
+					/>
 
 					{/* FAB - Hidden on mobile collapsed */}
 					{showFab && fabConfig && (
