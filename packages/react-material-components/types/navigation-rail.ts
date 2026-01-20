@@ -11,6 +11,7 @@ export interface NavRailDestinationConfig {
 	badge?: string | number;
 	hidden?: boolean;
 	onClick?: () => void;
+	href?: string;
 }
 
 export interface FabConfig {
@@ -39,7 +40,7 @@ export interface NavRailProps
 	activeTextColor?: string;
 }
 
-export interface NavRailDestinationProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface NavRailDestinationProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	icon: React.ReactNode;
 	label: string;
 	active?: boolean;

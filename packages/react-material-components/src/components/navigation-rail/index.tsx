@@ -8,7 +8,11 @@
 import React from "react";
 import { cva } from "class-variance-authority";
 import { clsx } from "clsx";
-import { NavRailProps } from "../../../types/navigation-rail";
+import {
+	NavRailProps,
+	NavRailDestinationConfig,
+} from "../../../types/navigation-rail";
+export type { NavRailProps, NavRailDestinationConfig };
 import { NavigationRailDestination } from "./navigation-rail-destination";
 import { cn } from "../../../lib/utils/helpers";
 import { MenuButton } from "./menu-button";
@@ -111,6 +115,7 @@ export const NavigationRail = ({
 								active={dest.id === activeId}
 								expanded={isExpanded}
 								onClick={dest.onClick}
+								href={dest.href}
 							/>
 						))}
 					</div>

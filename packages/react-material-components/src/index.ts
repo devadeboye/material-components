@@ -1,4 +1,4 @@
-export * from "./components/button/Button";
+export * from "./components/button";
 export * from "./components/card";
 export * from "./components/fabs/fab";
 export * from "./components/navigation-rail";

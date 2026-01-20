@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Button } from "./Button";
+import { Button } from ".";
 
 const meta = {
 	title: "Components/Button",
@@ -12,7 +12,7 @@ const meta = {
 	argTypes: {
 		variant: {
 			control: "select",
-			options: ["filled", "tonal", "outlined", "text"],
+			options: ["filled", "tonal", "outlined", "text", "elevated"],
 		},
 		size: {
 			control: "radio",
@@ -88,6 +88,21 @@ export const Disabled: Story = {
 	args: {
 		disabled: true,
 		children: "Disabled",
+	},
+};
+
+export const Elevated: Story = {
+	args: {
+		variant: "elevated",
+		children: "Elevated Button",
+	},
+};
+
+export const CustomColor: Story = {
+	args: {
+		variant: "filled",
+		className: "bg-orange-500 text-white hover:bg-orange-600",
+		children: "Custom Color",
 	},
 };
 

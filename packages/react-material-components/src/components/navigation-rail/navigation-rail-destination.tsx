@@ -27,8 +27,10 @@ export const NavigationRailDestination = ({
 	activeBgColor = "bg-secondary-container",
 	activeTextColor = "text-on-secondary-container",
 	className,
+	href,
 	...props
 }: NavRailDestinationProps) => {
+	const Component = href ? "a" : "div";
 	const activeIndicatorVariants = cva(
 		"absolute rounded-full z-0 transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)]" +
 			` ${activeBgColor} ${activeTextColor}`,
@@ -47,11 +49,10 @@ export const NavigationRailDestination = ({
 	);
 
 	return (
-		<div
-			className={cn(navItemVariants({ expanded, className }))}
-			{...props}
-			tabIndex={0}
-			role="button"
+		<Component
+			className={cn(navItemVariants({ expanded, className }), "no-underline")}
+			href={href}
+			{...(props as any)}
 		>
 			<div className={cn(activeIndicatorVariants({ active, expanded }))} />
 
@@ -77,6 +78,6 @@ export const NavigationRailDestination = ({
 				{label}
 			</span>
 			<Ripple />
-		</div>
+		</Component>
 	);
 };

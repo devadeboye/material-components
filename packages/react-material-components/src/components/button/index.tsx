@@ -20,28 +20,29 @@ const buttonVariants = cva(
 		variants: {
 			variant: {
 				filled:
-					"bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 shadow-sm hover:shadow-md",
+					"bg-primary text-on-primary hover:bg-primary/90 shadow-sm hover:shadow-md",
 				tonal:
-					"bg-gray-200 text-gray-900 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700",
+					"bg-secondary-container text-on-secondary-container hover:bg-secondary-container/90",
 				outlined:
-					"border border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100 dark:border-gray-700 dark:text-gray-100 dark:hover:bg-gray-800",
-				text: "bg-transparent text-gray-900 hover:bg-gray-100 dark:text-gray-100 dark:hover:bg-gray-800",
+					"border border-outline bg-transparent text-primary hover:bg-primary/10 active:bg-primary/10",
+				text: "bg-transparent text-primary hover:bg-primary/10 active:bg-primary/10",
 				elevated:
-					"bg-white text-gray-900 shadow-md hover:shadow-lg dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800",
+					"bg-surface-container-low text-primary shadow-elevation-1 hover:shadow-elevation-2 hover:bg-surface-container-low/80",
 			},
 
 			size: {
 				/** extra small */
-				xs: "h-8 px-3 font-medium text-sm",
+				xs: "h-8 px-3 text-label-s",
 				/** small */
-				s: "h-10 px-4 font-medium text-sm",
-				/** medium */
-				m: "h-14 px-6 font-medium text-base",
+				s: "h-9 px-3 text-label-l",
+				/** medium (M3 Default) */
+				m: "h-10 px-6 text-label-l",
 				/** large */
-				l: "h-24 px-12 font-normal text-2xl",
+				l: "h-12 px-8 text-label-l",
 				/** extra large */
-				xl: "h-34 px-16 font-normal text-[32px]/10",
+				xl: "h-14 px-10 text-title-m",
 			},
+
 
 			shape: {
 				round: "rounded-full",
@@ -139,7 +140,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				ref={ref}
 				{...props}
 			>
-				{/* State Layer (Hover/Reset) handled via hover:bg utilities */}
+				{/* State Layer (Hover/Reset) handled via hover:bg utilities or overlay below */}
+				<div className="absolute inset-0 z-0 bg-current opacity-0 transition-opacity hover:opacity-[0.08] focus:opacity-[0.12] active:opacity-[0.12]" />
+				
 				<span
 					className={`relative z-10 flex items-center justify-center ${gap}`}
 				>

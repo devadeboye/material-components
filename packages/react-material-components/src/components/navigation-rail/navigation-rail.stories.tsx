@@ -99,3 +99,25 @@ export const NoMenuButton: StoryObj<typeof NavigationRail> = {
 		activeId: "home",
 	},
 };
+export const WithLinks: StoryObj<typeof NavigationRail> = {
+	args: {
+		destinations: [
+			{ id: "home", icon: <HomeIcon />, label: "Home", href: "/" },
+			{ id: "search", icon: <SearchIcon />, label: "Search", href: "/search" },
+			{
+				id: "inbox",
+				icon: <InboxIcon />,
+				label: "Inbox",
+				badge: 3,
+				href: "/inbox",
+			},
+			{
+				id: "settings",
+				icon: <SettingsIcon />,
+				label: "Settings",
+				href: "/settings",
+			},
+		],
+		activeId: "home",
+	},
+};
