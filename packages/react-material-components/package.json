@@ -16,8 +16,7 @@
 			"import": "./dist/index.mjs",
 			"require": "./dist/index.js"
 		},
-		"./styles.css": "./dist/styles.css",
-		"./base.css": "./dist/base.css"
+		"./styles.css": "./dist/styles.css"
 	},
 	"scripts": {
 		"build": "tsup",
